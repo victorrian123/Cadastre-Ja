@@ -1,0 +1,82 @@
+<html>
+    <head>
+    <title>Cadastro</title>
+</head>
+<style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+    body{
+        background-color: #5F7C8A;
+    }
+
+    form{
+        background-color: white;
+        max-width: 500px;
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    form h3 {
+        text-align: center;
+        color: #5F7C8A;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-bottom: 15px;
+    }
+
+    form input[type = text],
+    form input[type = password] {
+        width: 100%;
+        height: 45px;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        margin: 10px 0;
+    }
+
+    form input[type=submit] {
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        background-color: #5F7C8A;
+        color: white;
+        border: 0;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    form input[type=checkbox] {
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+
+    form input[type=submit]:hover {
+        background-color: #6b95ac;
+    }
+
+    span{
+        position: relative;
+    }
+</style>
+    <body>
+        <form method="post">
+            <h3>Cadastre aqui</h3>
+            <input type="text" name="email" placeholder="Digite seu Email"/>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua Senha"/>
+            <input type="checkbox" name="" onclick="ocultarsenha()"><h3>Mostrar senha</h3>
+            <input type="submit" name="acao" value="Enviar"/>
+        </form>
+    </body>
+    <script>
+    function ocultarsenha(){
+        var senhabox = document.getElementById("senha")
+        if (senhabox.type == "password") {
+            senhabox.type = "text"
+        } else {
+            senhabox.type="password"
+        }
+}
+    </script>
+</html>
